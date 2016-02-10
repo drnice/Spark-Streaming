@@ -18,8 +18,11 @@ http://downloads.typesafe.com/scala/2.10.5/scala-2.10.5.tgz?_ga=1.7758962.110454
 Ensure java version 1.7 or greater is installed and JAVA_HOME set.
 
 Set environment variables
+
 export SPARK_HOME=/Users/drice/examples/spark-1.3.0-bin-hadoop2.4/
+
 export SCALA_HOME=/Users/drice/examples/scala-2.10.5
+
 export PATH=$PATH:$SCALA_HOME/bin
 
 Start Spark Master
