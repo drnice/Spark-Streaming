@@ -2,18 +2,18 @@
 Example of spark streaming listening on socket
 Client listens on standard in and writes data captured to socket for spark streaming to absorb
 
-This project includes both a sample client (waiting for client to write data on standard in) and pushing data socket on which Spark Streaming is listening on.
+This project includes both a the client application (where client awaits input of data from standard in) and pushes data to socket on which Spark Streaming is listening on.
 
 NOTE: All variables are hard coded in this for simplicity sakes.
 
 # Spark Stand alone setup
 Download spark http://spark.apache.org/downloads.html
-I've tested version 1.3 - 1.6 of Spark with this project.
+Tested version 1.3 - 1.6 of Spark with this project.
 
 Extract tar ball to directory of your choice
 
 Download scala version 2.10.5
-http://downloads. typesafe.com/scala/2.10.5/scala-2.10.5.tgz?_ga=1.7758962.110454 7853.1428884173.
+http://downloads.typesafe.com/scala/2.10.5/scala-2.10.5.tgz?_ga=1.7758962.1104547853.1428884173.
 
 Ensure java version 1.7 or greater is installed and JAVA_HOME set.
 
@@ -50,8 +50,10 @@ java -classpath Spark-Streaming.jar DRSpark.streaming.ClientApp
 
 This will launch client application which is waiting for Spark Streaming program to connect
 
-Now launch the Spark-Streaming application (note have to change host name)
+Now in another terminal launch the Spark-Streaming application (note have to change host name)
 $SPARK_HOME/bin/spark-submit --class DRSpark.streaming.ScalaFirstStreamingExample --master spark://<HOSTNAME>:7077 Spark-Streaming.jar
+
+At this point the client and spark streaming application will connect over port 9087 (hardcoded in code) and from client any data you write via standard in will get absorb in spark stream.
 
 
 
