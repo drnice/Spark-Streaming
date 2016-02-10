@@ -30,7 +30,8 @@ starting org.apache.spark.deploy.master.Master, logging to /Users/drice/examples
 Once Spark Master is running you should be able to launch this URL from browser (note hostname will be different)
 http://hw10593.local:8080/
 
-Start Spark Worker - where <HOSTNAME> is the name of the master host
+Start Spark Worker - where HOSTNAME is the name of the master host
+
 root# ./bin/spark-class org.apache.spark.deploy.worker.Worker spark://HOSTNAME:7077 &
 
 #Setting up IDE - in my case Eclipse
