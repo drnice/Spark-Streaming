@@ -1,6 +1,9 @@
 # Spark-Streaming
-Example of spark streaming listening on socket for data push from client
+Example of spark streaming listening on socket
+Client listens on standard in and writes data captured to socket for spark streaming to absorb
+
 This project includes both a sample client (waiting for client to write data on standard in) and pushing data socket on which Spark Streaming is listening on.
+
 NOTE: All variables are hard coded in this for simplicity sakes.
 
 # Spark Stand alone setup
