@@ -27,7 +27,9 @@ export PATH=$PATH:$SCALA_HOME/bin
 
 Start Spark Master
 root# cd spark-1.3.0-bin-hadoop2.4/sbin
+
 root# ./start-master.sh
+
 starting org.apache.spark.deploy.master.Master, logging to /Users/drice/examples/spark-1.3.0-bin-hadoop2.4/sbin/../logs/spark-root-org.apache.spark.deploy.master.Master-1-HW10593.local.out
 
 Once Spark Master is running you should be able to launch this URL from browser (note hostname will be different)
