@@ -62,19 +62,19 @@ $SPARK_HOME/bin/spark-submit --class DRSpark.streaming.ScalaFirstStreamingExampl
 At this point the client and spark streaming application will connect over port 9087 (hardcoded in code) and from client any data you write via standard in will get absorb in spark stream.
 
 #Run Project on YARN on HDP Sandox
-STEP1: Launch Client Application
+<b>STEP 1</b>: Launch Client Application
 
 [root@sandbox ~]# java -classpath Spark-Example.jar DRSpark.streaming.ClientApp
 
 This clientapp will await spark stream to connect to port on client application.
 
-STEP2: From a new terminal Launch Spark streaming application on YARN
+<b>STEP 2</b>: From a new terminal Launch Spark streaming application on YARN
 
 [root@sandbox ~]# java -classpath Spark-Example.jar DRSpark.streaming.ClientApp
 
 This clientapp will await spark stream to connect to port on client application.
 
-STEP3: From the Client Application Terminal wait for spark stream to connect 
+<b>STEP 3</b>: From the Client Application Terminal wait for spark stream to connect 
 
 should see information like below when spark stream connects to client application
 
@@ -89,16 +89,16 @@ Connection Received
 Waiting for user to input some data
 
 
-STEP4: type sentences with repeating words in client application terminal and hit enter. 
+<b>STEP 4</b>: type sentences with repeating words in client application terminal and hit enter. 
 
 example input: this is a test this is a test this is a test again and again and again
 
 
-STEP5: look at Spark Streaming terminal and see similar line as follows
+<b>STEP 5</b>: look at Spark Streaming terminal and see similar line as follows
 
 16/06/17 15:50:23 INFO BlockManagerInfo: Added input-0-1466178623400 in memory on sandbox.hortonworks.com:35223 (size: 77.0 B, free: 143.6 MB)
 
-STEP6: control+c the spark stream to finish the application - understanding the output
+<b>STEP 6</b>: control+c the spark stream to finish the application - understanding the output
 
 16/06/17 15:51:00 INFO DAGScheduler: Job 11 finished: collect at ScalaFirstStreamingExample.scala:70, took 0.132667 s
 
