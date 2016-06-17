@@ -65,36 +65,57 @@ At this point the client and spark streaming application will connect over port 
 STEP1: Launch Client Application
 
 [root@sandbox ~]# java -classpath Spark-Example.jar DRSpark.streaming.ClientApp
+
 This clientapp will await spark stream to connect to port on client application.
 
 STEP2: From a new terminal Launch Spark streaming application on YARN
+
 [root@sandbox ~]# java -classpath Spark-Example.jar DRSpark.streaming.ClientApp
+
 This clientapp will await spark stream to connect to port on client application.
 
 STEP3: From the Client Application Terminal wait for spark stream to connect 
+
 should see information like below when spark stream connects to client application
 
 [root@sandbox ~]# java -classpath Spark-Example.jar DRSpark.streaming.ClientApp
+
 Defining new Socket
+
 Waiting for Incoming Connection
+
 Connection Received
+
 Waiting for user to input some data
 
+
 STEP4: type sentences with repeating words in client application terminal and hit enter. 
+
 example input: this is a test this is a test this is a test again and again and again
 
+
 STEP5: look at Spark Streaming terminal and see similar line as follows
+
 16/06/17 15:50:23 INFO BlockManagerInfo: Added input-0-1466178623400 in memory on sandbox.hortonworks.com:35223 (size: 77.0 B, free: 143.6 MB)
 
 STEP6: control+c the spark stream to finish the application - understanding the output
+
 16/06/17 15:51:00 INFO DAGScheduler: Job 11 finished: collect at ScalaFirstStreamingExample.scala:70, took 0.132667 s
+
 ++++++++++++++++++Start Printing Results++++++++++++++++++
+
 (this,3)
+
 (is,3)
+
 (again,3)
+
 (test,3)
+
 (a,3)
+
 (and,2)
+
 ++++++++++++++++++Finished Printing Results++++++++++++++++++
 
 
